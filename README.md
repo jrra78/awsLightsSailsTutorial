@@ -11,11 +11,19 @@ $ sudo apt install -y ufw
 ```
 sudo ufw allow <port>/<protocol>
 ```
+port 22 (ssh), 80 (http) and 443 (https)
 
 | port | protocol |
 |------|----------|
+| 22   | ssh  |
+| 80   | http |
+| 443  | http |
+| 3306 |
 
-
+$ sudo ufw allow 22/tcp
+$ sudo ufw allow 80/tcp comment 'accept Apache'
+$ sudo ufw allow 443/tcp 'accept HTTPS connections'
+$ sudo ufw allow 3306 'accept HTTPS connections'
 
 ```
 $ sudo ufw allow ssh
@@ -32,4 +40,8 @@ Now that you have enabled UFW and set some rules, check the current firewall tab
 ```
 $ sudo ufw status
 
+```
+### Enable UFW
+```
+sudo ufw enable
 ```
