@@ -64,6 +64,8 @@ $ sudo apt -y install mysql-server postfix supervisor nginx git
 ```
 # 3. MySQL Setup
 
+## 3.1 Basic configuration
+
 ```
 $ sudo mysql_secure_installation
 ```
@@ -83,4 +85,16 @@ quit
 ```
 CREATE USER 'appUser'@'localhost' IDENTIFIED BY 'appUser123456@1'
 
+```
+## 3.2 Validate MySQL server functioning
+```
+systemctl status mysql.service
+```
+In case the server is not operational, it can be set as operational with the following command:
+```
+sudo systemctl start mysql
+```
+Check user access for adminitrative tasks: 
+```
+sudo mysqladmin -p -u root version
 ```
