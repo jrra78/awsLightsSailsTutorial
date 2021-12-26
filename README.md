@@ -51,3 +51,14 @@ To disable UFW on the server, use the following command:
 ```
 $ sudo ufw disable
 ```
+# 2. Installing dependencies
+```
+$ sudo apt -y update
+$ sudo apt -y upgrade 
+$ sudo apt -y autoremove --purge
+```
+
+```
+$ sudo apt -y install python3 python3-venv python3-dev
+$ sudo apt -y install mysql-server postfix supervisor nginx git
+```
