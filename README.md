@@ -7,3 +7,15 @@ UFW (Uncomplicated Fire Wall( is installed but disabled on some linux distributi
 ```
 $ sudo apt install -y ufw
 ```
+
+```
+sudo ufw allow <port>/<protocol>
+```
+
+```
+$ sudo ufw allow ssh
+$ sudo ufw allow http
+$ sudo ufw allow 443/tcp
+$ sudo ufw --force enable
+$ sudo ufw status
+```
