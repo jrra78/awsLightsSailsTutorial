@@ -78,3 +78,9 @@ ALTER USER 'root'@'localhost' IDENTIFIED WITH caching_sha2_password BY 'MyPasswo
 FLUSH PRIVILEGES;
 quit
 ```
+
+
+```
+CREATE USER 'appUser'@'localhost' IDENTIFIED BY 'appUser123456@1'
+
+```
