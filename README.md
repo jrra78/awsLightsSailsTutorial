@@ -12,10 +12,24 @@ $ sudo apt install -y ufw
 sudo ufw allow <port>/<protocol>
 ```
 
+| port | protocol |
+|------|----------|
+
+
+
 ```
 $ sudo ufw allow ssh
 $ sudo ufw allow http
 $ sudo ufw allow 443/tcp
 $ sudo ufw --force enable
 $ sudo ufw status
+```
+
+### Check UFW Status
+
+Now that you have enabled UFW and set some rules, check the current firewall table and operation.
+
+```
+$ sudo ufw status
+
 ```
