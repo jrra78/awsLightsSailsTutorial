@@ -84,8 +84,8 @@ quit
 
 ```
 CREATE USER 'appUser'@'localhost' IDENTIFIED BY 'appUser123456@1'
-
 ```
+
 ## 3.2 Validate MySQL server functioning
 ```
 systemctl status mysql.service
