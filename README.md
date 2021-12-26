@@ -90,13 +90,17 @@ CREATE USER 'appUser'@'localhost' IDENTIFIED BY 'appUser123456@1'
 
 ## 3.2 Validate MySQL server functioning
 ```
-systemctl status mysql.service
+$ systemctl status mysql.service
 ```
 In case the server is not operational, it can be set as operational with the following command:
 ```
-sudo systemctl start mysql
+$ sudo systemctl start mysql
 ```
 Check user access for adminitrative tasks: 
 ```
-sudo mysqladmin -p -u root version
+$ sudo mysqladmin -p -u root version
+```
+to access with any other user:
+```
+mysql -u appUser -p
 ```
