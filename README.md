@@ -2,35 +2,31 @@
 Basic tutorial for building and deploying applications in AWS LightSails VPS With Ubuntu Linux
 
 ## Security: setting the firewall
-UFW (Uncomplicated Fire Wall( is installed but disabled on some linux distributions (i.e. Ubuntu), and you need to enable it before opening any ports on your server. But if anything, you can manually install UFW by running the following command:
-
+UFW (Uncomplicated Fire Wall( is installed but disabled on some linux distributions (i.e. Ubuntu), and you need to enable it before opening any ports on your server. But if anything, you can manually install UFW by running the following command: 
+To install UFW use: 
 ```
 $ sudo apt install -y ufw
 ```
+### Ports configuration
+The basic UFW configuration will require access to the following: 
 
-```
-sudo ufw allow <port>/<protocol>
-```
-port 22 (ssh), 80 (http) and 443 (https)
-
-| port | protocol |
+| port | usage |
 |------|----------|
 | 22   | ssh  |
 | 80   | http |
-| 443  | http |
-| 3306 |
+| 443  | https |
+| 3306 | mysql |
 
-$ sudo ufw allow 22/tcp
-$ sudo ufw allow 80/tcp comment 'accept Apache'
-$ sudo ufw allow 443/tcp 'accept HTTPS connections'
-$ sudo ufw allow 3306 'accept HTTPS connections'
-
+Access can be granted by the following command
 ```
-$ sudo ufw allow ssh
-$ sudo ufw allow http
-$ sudo ufw allow 443/tcp
-$ sudo ufw --force enable
-$ sudo ufw status
+sudo ufw allow <port>/<protocol>
+```
+To acchieve the basic configuration, the following commands can be used:
+```
+$ sudo ufw allow 22
+$ sudo ufw allow 80
+$ sudo ufw allow 443
+$ sudo ufw allow 3306
 ```
 
 ### Check UFW Status
@@ -43,7 +39,11 @@ $ sudo ufw status
 ### Enable UFW
 To enable UFW on your server, run:
 ```
-sudo ufw enable
+$ sudo ufw enable
+```
+Alternatively
+```
+$ sudo ufw --force enable
 ```
 ### Disable UFW
 To disable UFW on the server, use the following command:
