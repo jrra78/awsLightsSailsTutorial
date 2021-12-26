@@ -110,7 +110,7 @@ $ sudo mysql -u root -p
 ```
 For remote database setup since MySQL must be able to listen for an external IP address where the server can be reached. To enable this, open up your mysqld.cnf file:
 ```
-s $udo nano /etc/mysql/mysql.conf.d/mysqld.cnf
+s sudo nano /etc/mysql/mysql.conf.d/mysqld.cnf
 ```
 change  bind-address to the 0.0.0.0 ddress, save changes and restart the server by using:
 ```
