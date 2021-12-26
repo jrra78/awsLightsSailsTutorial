@@ -119,4 +119,7 @@ $ sudo systemctl restart mysql
 Access to mysql and create an admin user: 
 ```
 CREATE USER 'admin'@'%' IDENTIFIED BY 'adminUser@123456';
+GRANT ALL PRIVILEGES ON *.* TO 'admin'@'%' WITH GRANT OPTION;
+FLUSH PRIVILEGES;
+SELECT user,host FROM mysql.user;
 ```
