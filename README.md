@@ -1,13 +1,14 @@
-# Linux Server Setup
+# 1. Linux Server Setup
 Basic tutorial for building and deploying applications in AWS LightSails VPS With Ubuntu Linux
 
-## Security: setting the firewall
-UFW (Uncomplicated Fire Wall( is installed but disabled on some linux distributions (i.e. Ubuntu), and you need to enable it before opening any ports on your server. But if anything, you can manually install UFW by running the following command: 
+## 1 Security: setting the firewall
+UFW (Uncomplicated Fire Wall( is installed but disabled on some linux distributions (i.e. Ubuntu), and you need to enable it before opening any ports on your server. But if anything, you can manually install UFW by running the following command:
+### 1.1 Installing UFW
 To install UFW use: 
 ```
 $ sudo apt install -y ufw
 ```
-### Ports configuration
+### 1.2 Ports configuration
 The basic UFW configuration will require access to the following: 
 
 | port | usage |
@@ -29,14 +30,14 @@ $ sudo ufw allow 443
 $ sudo ufw allow 3306
 ```
 
-### Check UFW Status
+### 1.3 Check UFW Status
 
 To verify what is currently blocked or allowed, you may use the verbose parameter when running ufw status, as follows:
 ```
 $ sudo ufw status
 
 ```
-### Enable UFW
+### 1.4 Enable UFW
 To enable UFW on your server, run:
 ```
 $ sudo ufw enable
@@ -45,7 +46,7 @@ Alternatively
 ```
 $ sudo ufw --force enable
 ```
-### Disable UFW
+### 1.5 Disable UFW
 To disable UFW on the server, use the following command:
 ```
 $ sudo ufw disable
