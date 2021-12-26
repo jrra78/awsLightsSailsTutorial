@@ -35,13 +35,18 @@ $ sudo ufw status
 
 ### Check UFW Status
 
-Now that you have enabled UFW and set some rules, check the current firewall table and operation.
-
+To verify what is currently blocked or allowed, you may use the verbose parameter when running ufw status, as follows:
 ```
 $ sudo ufw status
 
 ```
 ### Enable UFW
+To enable UFW on your server, run:
 ```
 sudo ufw enable
+```
+### Disable UFW
+To disable UFW on the server, use the following command:
+```
+$ sudo ufw disable
 ```
