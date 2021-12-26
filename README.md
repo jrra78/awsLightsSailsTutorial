@@ -66,13 +66,15 @@ $ sudo apt -y install mysql-server postfix supervisor nginx git
 
 ## 3.1 Basic configuration
 
+Changes some of the less secure default options for things like remote root logins and sample users, by using: 
 ```
 $ sudo mysql_secure_installation
 ```
-
+Validate your acess to the MySQL prompt:
 ```
 $ sudo mysql
 ```
+
 
 ```
 SELECT user,authentication_string,plugin,host FROM mysql.user;
