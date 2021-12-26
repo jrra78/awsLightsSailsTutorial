@@ -65,10 +65,16 @@ $ sudo apt -y install mysql-server postfix supervisor nginx git
 # 3. MySQL Setup
 
 ```
-$
+$ sudo mysql_secure_installation
 ```
 
 ```
-$
+$ sudo mysql
 ```
 
+```
+SELECT user,authentication_string,plugin,host FROM mysql.user;
+ALTER USER 'root'@'localhost' IDENTIFIED WITH caching_sha2_password BY 'MyPassword';
+FLUSH PRIVILEGES;
+quit
+```
