@@ -1,4 +1,4 @@
-# AWS LightSail Tutorial
+# Linux Server Setup
 Basic tutorial for building and deploying applications in AWS LightSails
 
 ## Security: setting the firewall
