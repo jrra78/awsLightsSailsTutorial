@@ -16,7 +16,6 @@ The basic UFW configuration will require access to the following:
 | 22   | ssh  |
 | 80   | http |
 | 443  | https |
-| 3306 | mysql |
 
 Access can be granted by the following command
 ```
@@ -27,7 +26,6 @@ To acchieve the basic configuration, the following commands can be used:
 $ sudo ufw allow 22
 $ sudo ufw allow 80
 $ sudo ufw allow 443
-$ sudo ufw allow 3306
 ```
 
 ### 1.3. Check UFW Status
