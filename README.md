@@ -62,9 +62,28 @@ $ sudo apt -y autoremove --purge
 $ sudo apt -y install python3 python3-venv python3-dev python3-pip
 $ sudo apt -y install supervisor nginx git
 ```
-# 3. MySQL Setup
 
-## 3.1 Basic configuration
+# 3. Create Virtual Environments
+Creation of virtual environments is done by executing the command venv:
+```
+python3 -m venv /path/to/new/virtual/environment
+```
+
+# 4. Upgrade PIP
+
+```
+pip install --upgrade pip
+```
+
+# 5. Install Scipy
+scipy packages cann be install via the command line by entering:
+```
+python -m pip install numpy scipy matplotlib ipython jupyter pandas sympy nose
+```
+
+# 5. MySQL Setup
+
+## 6.1 Basic configuration
 
 Changes some of the less secure default options for things like remote root logins and sample users, by using: 
 ```
@@ -88,7 +107,7 @@ quit
 CREATE USER 'appUser'@'localhost' IDENTIFIED BY 'appUser123456@1'
 ```
 
-## 3.2 Validate MySQL server functioning
+## 6.2 Validate MySQL server functioning
 ```
 $ systemctl status mysql.service
 ```
