@@ -1,5 +1,6 @@
 ## Aplication Deployment Guide
 
 ```
-$ sudo apt install -y ufw
+$ export FLASK_APP=aplication_name
+$ flask run
 ```
