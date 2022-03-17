@@ -64,6 +64,6 @@ $ sudo apt -y install supervisor nginx git
 # 3. Setting up Gunicorn
 
 ```
-$ gunicorn -b localhost:{port} -w {number of workers} {application_name}:app
+$ gunicorn -b localhost:{port} -w {number of workers} {application name}:app
 ```
 
