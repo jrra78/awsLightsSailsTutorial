@@ -59,3 +59,11 @@ $ sudo apt -y autoremove --purge
 ```
 $ sudo apt -y install python3 python3-venv python3-dev python3-pip
 $ sudo apt -y install supervisor nginx git
+```
+
+# 3. Setting up Gunicorn
+
+```
+$ gunicorn -b localhost:{port} -w {number of workers} {application_name}:app
+```
+
