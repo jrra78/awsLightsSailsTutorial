@@ -70,4 +70,8 @@ $ gunicorn -b localhost:{port} -w {number of workers} {application name}:app
 
 ```
 /home/ubuntu/venvs/backend/bin/python
+
+/home/ubuntu/venvs/backend/bin/gunicorn -b localhost:8080 -w 4 hello:app
+
+/home/ubuntu/venvs/backend/bin/gunicorn
 ```
