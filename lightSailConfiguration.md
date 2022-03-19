@@ -67,3 +67,7 @@ $ sudo apt -y install supervisor nginx git
 $ gunicorn -b localhost:{port} -w {number of workers} {application name}:app
 ```
 
+
+```
+/home/ubuntu/venvs/backend/bin/python
+```
